@@ -1,0 +1,28 @@
+flen: 1024
+fmax: 7600
+fmin: 80
+fs: 16000
+fshift: 128
+num_mels: 80
+top_db: 30
+trim_silence: false
+
+train_filelist: 'dataset/arctic/filelist/train.txt' # 当前数据集的数据划分文件 train
+test_filelist: 'dataset/arctic/filelist/test.txt' # 当前数据集的数据划分文件 test
+val_filelist: 'dataset/arctic/filelist/val.txt' # 当前数据集的数据划分文件 val
+
+data_root: 'dataset/arctic/data/main' # 当前数据集的数据根目录
+preprocessed_root: 'dataset/arctic/preprocessed_data' # 当前数据集的预处理数据根目录
+
+need_preprocess: True # 数据集是否需要预处理，如抽帧、抽音频等
+
+src1: './dataset/arctic/data/train' # 包含训练数据文件的数据文件夹（自己下载的.wav文件）
+dst1: './dataset/arctic/dump/arctic/feat/train' # .h5文件被存储的位置（标准化前的）
+ext1: '.wav'
+stat: './dataset/arctic/dump/arctic/stat.pkl' # 用于标准化的.pkl文件的路径
+src2: './dataset/arctic/dump/arctic/feat/train' # 同dst1
+dst2: './dataset/arctic/dump/arctic/norm_feat/train' # 标准化后的melspec存储的位置
+ext2: '.h5'
+src3: './dataset/arctic/data/test' # 包含测试数据文件的数据文件夹（自己下载的.wav文件）
+
+preprocess_batch_size: 32
