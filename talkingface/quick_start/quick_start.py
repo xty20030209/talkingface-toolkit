@@ -8,6 +8,7 @@ from torch.utils import data as data_utils
 from ray import tune
 
 from talkingface.config import Config
+from talkingface.data.dataset.stargan_dataset import collate_fn
 
 from talkingface.utils import (
     init_logger,
@@ -28,7 +29,7 @@ def run(
         config_dict=None,
         saved=True,
         evaluate_model_file=None
-):
+):  
     res = run_talkingface(
         model=model,
         dataset=dataset,
@@ -77,10 +78,10 @@ def run_talkingface(
 
     train_dataset, val_dataset = create_dataset(config)
     train_data_loader = data_utils.DataLoader(
-        train_dataset, batch_size=config["batch_size"], shuffle=True
+        train_dataset, batch_size=config["batch_size"], shuffle=True, drop_last=False, collate_fn=collate_fn
     )
     val_data_loader = data_utils.DataLoader(
-        val_dataset, batch_size=config["batch_size"], shuffle=False
+        val_dataset, batch_size=config["batch_size"], shuffle=False, drop_last=False, collate_fn=collate_fn
     )
 
     # load model
