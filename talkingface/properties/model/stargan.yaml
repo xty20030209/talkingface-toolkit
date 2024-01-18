@@ -1,0 +1,41 @@
+batch_size: 12
+arch_type: conv
+epochs: 3
+gradient_clip: 1.0
+hdim: 64
+loss_type: wgan
+lrate_d: 5.0e-06
+lrate_g: 0.0005
+mdim: 32
+n_spk: 3
+normtype: IN
+num_mels: 80
+sdim: 16
+spk_list:
+- spk_1
+- spk_2
+- spk_3
+src_conditioning: false
+w_adv: 1.0
+w_cls: 1.0
+w_cyc: 1.0
+w_grad: 1.0
+w_rec: 1.0
+zdim: 16
+model: "stargan"
+experiment_name: "conv_wgan_exp1"
+model_rootdir: "./results/stargan/arctic"
+snapshot: 1
+checkpoint: 0
+
+# Train
+checkpoint_sub_dir: "/stargan" # 和overall.yaml里checkpoint_dir拼起来作为最终目录
+
+temp_sub_dir: "/stargan" # 和overall.yaml里temp_dir拼起来作为最终目录
+
+# Vocoder
+vocoder: "parallel_wavegan.v1"
+voc_dir: "saved/stargan/pwg/egs/arctic_4spk_flen64ms_fshift8ms/voc1"
+dataset_yaml_path: "talkingface/properties/dataset/arctic.yaml"
+model_yaml_path: "talkingface/properties/model/stargan.yaml"
+out: "results/stargan/out/arctic"
