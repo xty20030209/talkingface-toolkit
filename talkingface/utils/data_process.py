@@ -241,9 +241,9 @@ class arcticPreprocess:
         fargs_list = [
             [
                 f,
-                f.replace(src1, dst1).replace(ext, ".h5"),
+                f.replace(src1, dst1).replace(ext1, ".h5"),
             ]
-            for f in self.walk_files(src1, ext2)
+            for f in self.walk_files(src1, ext1)
         ]
         
         results = []
