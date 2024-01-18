@@ -1,0 +1,9 @@
+./dataset/arctic/dump/arctic/norm_feat/test/spk_1/utt1.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_1/utt2.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_1/utt3.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_2/utt1.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_2/utt2.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_2/utt3.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_3/utt1.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_3/utt2.h5
+./dataset/arctic/dump/arctic/norm_feat/test/spk_3/utt3.h5
