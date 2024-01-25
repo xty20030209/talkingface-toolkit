@@ -11,7 +11,7 @@
 - 能实现作业的要求。但注意以下特殊情况：
   - 需要把vocoder放置在对应路径下（eg.saved/stargan/pwg，不过源码可以使用两种vocoder）
   - `quickstart` 中导入了自定义的`collate_fn`（`dataloader`用的）。
-  - `trainer` 中导入了多个库，并重写了 VC 的 `evaluate` 方法。
+  - `trainer` 中导入了多个库，并重写了`evaluate` 方法。
 
 ## vocoder（从StarGAN的README.md截的）
 1. Place a copy of the directory `parallel_wavegan` from https://github.com/kan-bayashi/ParallelWaveGAN in `pwg/`.
