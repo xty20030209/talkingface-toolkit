@@ -19,4 +19,5 @@
 3. Optionally, Parallel WaveGAN can be used instead for waveform generation. The trained models are available [here](https://drive.google.com/drive/folders/1zRYZ9dx16dONn1SEuO4wXjjgJHaYSKwb?usp=sharing). Once these are downloaded, place them in `pwg/egs/`. 
 
 ## 验证截图（传上去的长截图显示不了那么长不知道为什么本来截的是完整流程）
-![StarGAN 验证截图](confirm.png)
+![StarGAN 验证截图1](confirm.png)
+![StarGAN 验证截图2](confirm_add.png)
